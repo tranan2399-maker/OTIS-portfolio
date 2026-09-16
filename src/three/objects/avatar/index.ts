@@ -75,7 +75,7 @@ const assignMatcap = (child: Mesh): boolean => {
   if (child.name === "black") {
     tex = resources.items["matcap-black"];
   } else if (child.name === "gray") {
-    tex = resources.items["matcap-gray"];
+    tex = resources.items["matcap-black"]; // Đổi tóc sang màu đen
   } else if (child.name === "skin") {
     tex = resources.items["matcap-skin"];
   } else if (child.name === "white") {

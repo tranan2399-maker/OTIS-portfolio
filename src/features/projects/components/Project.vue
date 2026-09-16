@@ -16,7 +16,13 @@ const error = ref<Error | null>(null);
 
 const fetchProject = async (project: string | undefined) => {
   try {
-    const module = await projectModules[locale.value as Locale][project as string].default;
+    if (!locale.value || !project) return;
+    const mod = projectModules[locale.value as Locale][project];
+    if (!mod) {
+      console.error(`Project module ${project} not found in locale ${locale.value}`);
+      return;
+    }
+    const module = await mod.default;
     content.value = module;
     loading.value = false;
   } catch (err) {

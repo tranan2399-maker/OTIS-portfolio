@@ -99,7 +99,7 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
     <div ref="wrapperRef" class="box-description">
       <div class="box-description-content">
         <div class="box-description-details">
-          <p class="box-description-details-name">David</p>
+          <p class="box-description-details-name">Phúc Ân</p>
           <div class="box-description-details-location">
             <PinIcon class="box-description-details-location-icon" />
             <p class="box-description-details-location-copy">{{ t("germany") }}</p>
@@ -220,9 +220,8 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
   }
 
   &-content {
-    border: var(--stroke-sm) solid var(--color-cyan-400);
     border-radius: var(--radius-md);
-    background: linear-gradient(to bottom, var(--color-hologram-top) 0%, var(--color-hologram-bottom) 100%);
+    @include mixins.liquid-glass-dark(0.3, 16px);
 
     @include mixins.landscape {
       padding: var(--space-xs) var(--space-sm);

@@ -108,16 +108,16 @@ onUnmounted(() => {
   &::after {
     content: "";
     position: absolute;
-    top: -8px;
-    left: -8px;
-    width: calc(100% + 16px);
-    height: calc(100% + 16px);
-    background-color: var(--color-grayscale-400);
+    top: -16px;
+    left: -16px;
+    width: calc(100% + 32px);
+    height: calc(100% + 32px);
+    @include mixins.liquid-glass(0.4, 20px);
     border-radius: var(--radius-xl);
     z-index: -1;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   @include mixins.hover {

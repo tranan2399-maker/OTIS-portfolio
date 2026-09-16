@@ -12,36 +12,36 @@ export default [
     title: "StreakOn",
     slug: "streakon",
     thumbnail: thumbnailStreakon,
-    description: "App für tägliche Gewohnheiten",
+    description: "Ứng dụng theo dõi thói quen",
   },
   {
     title: "CubeWar",
     slug: "cubewar",
     thumbnail: thumbnailCubeWar,
-    description: "Multiplayer-Strategiespiel",
+    description: "Trò chơi chiến thuật nhiều người chơi",
   },
   {
     title: "Quibbo",
     slug: "quibbo",
     thumbnail: thumbnailQuibbo,
-    description: "Multiplayer-Gaming-Plattform",
+    description: "Nền tảng trò chơi nhiều người",
   },
   {
     title: "Sharkie",
     slug: "sharkie",
     thumbnail: thumbnailSharkie,
-    description: "2D-Abenteuerspiel",
+    description: "Trò chơi phiêu lưu 2D",
   },
   /**  {
-    title: "WebGL Partikel",
+    title: "Hạt WebGL",
     slug: "particles",
     thumbnail: thumbnailParticles,
-    description: "Dynamische 3D Partikel",
+    description: "Hiệu ứng hạt 3D động",
   }, */
   {
     title: "Pokédex",
     slug: "pokedex",
     thumbnail: thumbnailPokedex,
-    description: "Open-Source Lernprojekt",
+    description: "Dự án học tập mã nguồn mở",
   },
 ] as const satisfies ProjectPreview[];

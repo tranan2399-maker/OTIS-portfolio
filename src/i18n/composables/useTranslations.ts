@@ -8,14 +8,18 @@ import type { Locale } from "../types";
 
 export const useTranslations = () => {
   onMounted(() => {
-    locale.value = window.localStorage.getItem("portfolio-locale") as Locale;
-    if (!locale.value) {
+    const storedLocale = window.localStorage.getItem("portfolio-locale") as Locale;
+    
+    // Nếu có locale lưu sẵn và locale đó vẫn hợp lệ (có trong LOCALES)
+    if (storedLocale && storedLocale in LOCALES) {
+      locale.value = storedLocale;
+    } else {
+      // Nếu không, ưu tiên ngôn ngữ trình duyệt, hoặc fallback về 'vn'
       const preferredLocale = navigator.language.split("-")[0] as Locale;
-
       if (preferredLocale in LOCALES) {
         locale.value = preferredLocale;
       } else {
-        locale.value = "en";
+        locale.value = "vn";
       }
     }
   });
