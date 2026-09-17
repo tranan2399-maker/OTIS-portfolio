@@ -22,7 +22,7 @@ const { project } = defineProps<{
 
 <style scoped lang="scss">
 .next-project {
-  border: var(--stroke-md) solid var(--color-grayscale-400);
+  border: none;
   padding: var(--space-xxs);
   padding-right: var(--space-sm);
   border-radius: var(--radius-md);

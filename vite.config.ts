@@ -16,6 +16,7 @@ export default defineConfig({
     port: 3000,
     strictPort: true,
     host: true,
+    historyApiFallback: true,
   },
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".ogg", ".wav", ".glsl", ".ktx2"],

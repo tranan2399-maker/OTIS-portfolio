@@ -14,6 +14,7 @@ export interface Props {
   alt?: string;
   caption?: string;
   index: number;
+  originalRatio?: boolean;
 }
 
 const props = defineProps<Props>();
@@ -21,6 +22,7 @@ const props = defineProps<Props>();
 const wrapperClasses = computed(() => {
   return {
     "project-media": true,
+    "project-media-original-ratio": props.originalRatio,
   };
 });
 
@@ -172,6 +174,21 @@ onMounted(async () => {
     background-color: var(--color-background-300);
     width: 100%;
     height: 100%;
+  }
+
+  &.project-media-original-ratio {
+    aspect-ratio: auto;
+    height: auto;
+
+    .project-media-content {
+      height: auto;
+    }
+
+    .project-media-image,
+    .project-media-video {
+      height: auto;
+      object-fit: contain;
+    }
   }
 }
 </style>
