@@ -41,8 +41,12 @@ const tick = () => {
     }
     cursorType.value = detectedType.value;
   } else {
-    isVisible.value = false;
-    cursorType.value = null;
+    if (!isVisible.value) {
+      isVisible.value = true;
+      currentX.value = mouseX.value;
+      currentY.value = mouseY.value;
+    }
+    cursorType.value = "circle-white";
   }
 
   if (cursorWrapperRef.value) {

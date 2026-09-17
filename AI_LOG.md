@@ -46,3 +46,4 @@ Khi AI tạo hình ảnh nền Lo-Fi, TUÂN THỦ NGHIÊM NGẶT:
   - Cấu hình tiếng Việt, thiết lập font chữ.
   - Tự động hóa Deploy lên Github Pages (`OTIS-portfolio`).
   - Tạo file `AI_LOG.md` làm bộ nhớ liên tục.
+  - Cập nhật Custom Cursor: Hiển thị vòng tròn trắng (`circle-white`) đi theo chuột ở tất cả mọi nơi (không chỉ khi hover).
