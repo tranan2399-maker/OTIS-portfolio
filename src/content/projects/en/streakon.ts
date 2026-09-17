@@ -1,7 +1,4 @@
-import streakon0 from "../../../assets/images/projects/streakon/streakon-0.webp";
-import streakon1 from "../../../assets/images/projects/streakon/streakon-1.webp";
-import streakon2 from "../../../assets/images/projects/streakon/streakon-2.webp";
-import streakon3 from "../../../assets/images/projects/streakon/streakon-3.webp";
+import comingSoon from "../../../assets/images/coming-soon.jpg";
 
 import type { ProjectContent } from "../../types";
 
@@ -9,45 +6,22 @@ export default {
   title: "StreakOn",
   theme: "dark",
   tags: ["next", "node", "postgresql", "redis"],
-  videoBorder: false,
-  live: "https://www.streakon.app",
-  description:
-    "StreakOn helps small groups stay consistent with daily habits through shared streaks and simple check-ins.<br/><br/>The app was designed around low friction interactions, mobile usability, and lightweight social features, using Next.js, Node.js, PostgreSQL, and Redis.",
+  description: "This project is under development. Check back soon!",
   components: [
     {
       type: "media",
       props: {
         type: "image",
-        src: streakon0,
-        alt: "Solo and group streaks",
-        caption: "Solo and group streaks",
+        src: comingSoon,
+        alt: "Coming Soon",
+        caption: "🚧 Coming Soon",
       },
     },
     {
-      type: "media",
+      type: "text",
       props: {
-        type: "image",
-        src: streakon1,
-        alt: "Streak progress",
-        caption: "Streak progress",
-      },
-    },
-    {
-      type: "media",
-      props: {
-        type: "image",
-        src: streakon2,
-        alt: "Cheer for friends",
-        caption: "Cheer for friends",
-      },
-    },
-    {
-      type: "media",
-      props: {
-        type: "image",
-        src: streakon3,
-        alt: "Invite Flow",
-        caption: "Invite Flow",
+        title: "Coming Soon",
+        text: "This project is currently under development. Check back soon to see what's cooking! 🚀",
       },
     },
   ],

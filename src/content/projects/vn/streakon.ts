@@ -1,7 +1,4 @@
-import streakon0 from "../../../assets/images/projects/streakon/streakon-0.webp";
-import streakon1 from "../../../assets/images/projects/streakon/streakon-1.webp";
-import streakon2 from "../../../assets/images/projects/streakon/streakon-2.webp";
-import streakon3 from "../../../assets/images/projects/streakon/streakon-3.webp";
+import comingSoon from "../../../assets/images/coming-soon.jpg";
 
 import type { ProjectContent } from "../../types";
 
@@ -9,45 +6,22 @@ export default {
   title: "StreakOn",
   theme: "dark",
   tags: ["next", "node", "postgresql", "redis"],
-  videoBorder: false,
-  live: "https://www.streakon.app",
-  description:
-    "StreakOn unterstützt kleine Gruppen dabei, durch gemeinsame Streaks und einfache Check-ins bei täglichen Gewohnheiten dranzubleiben.<br/><br/>Die App wurde mit Fokus auf geringe Interaktionshürden, mobile Nutzung und leichte soziale Funktionen entwickelt – mit Next.js, Node.js, PostgreSQL und Redis.",
+  description: "Dự án đang được phát triển. Hãy quay lại sớm nhé!",
   components: [
     {
       type: "media",
       props: {
         type: "image",
-        src: streakon0,
-        alt: "Solo- und Gruppen-Streaks",
-        caption: "Solo- und Gruppen-Streaks",
+        src: comingSoon,
+        alt: "Coming Soon",
+        caption: "🚧 Coming Soon",
       },
     },
     {
-      type: "media",
+      type: "text",
       props: {
-        type: "image",
-        src: streakon1,
-        alt: "Streak-Fortschritt",
-        caption: "Streak-Fortschritt",
-      },
-    },
-    {
-      type: "media",
-      props: {
-        type: "image",
-        src: streakon2,
-        alt: "Freunde anfeuern",
-        caption: "Freunde anfeuern",
-      },
-    },
-    {
-      type: "media",
-      props: {
-        type: "image",
-        src: streakon3,
-        alt: "Einladungs-Flow",
-        caption: "Einladungs-Flow",
+        title: "Coming Soon",
+        text: "Dự án này đang trong quá trình phát triển. Hãy quay lại sớm để xem thành quả nhé! 🚀",
       },
     },
   ],

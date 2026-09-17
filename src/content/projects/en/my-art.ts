@@ -6,7 +6,7 @@ import img6 from "../../../assets/images/projects/my-art/b24-6.png";
 import img7 from "../../../assets/images/projects/my-art/b24-7.svg";
 import img8 from "../../../assets/images/projects/my-art/b24-8.svg";
 import img9 from "../../../assets/images/projects/my-art/b24-9.svg";
-import videoLogo from "../../../assets/videos/b24-logo.mp4";
+import videoLogo from "../../../assets/videos/b24-intro.mp4";
 
 import type { ProjectContent } from "../../types";
 
