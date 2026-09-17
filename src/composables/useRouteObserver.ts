@@ -5,7 +5,14 @@ import { isTransitioning } from "./useProjectTransition";
 // GLOBAL REACTIVE PATH
 // -----------------------------------------------------------------------------
 
-export const path = ref(typeof window !== "undefined" ? window.location.pathname : "/");
+// Strip the base path so routing works both locally (/OTIS-portfolio/) and in prod
+const BASE = import.meta.env.BASE_URL ?? "/";
+const stripBase = (fullPath: string) => {
+  const base = BASE.endsWith("/") ? BASE.slice(0, -1) : BASE;
+  return fullPath.startsWith(base) ? fullPath.slice(base.length) || "/" : fullPath;
+};
+
+export const path = ref(typeof window !== "undefined" ? stripBase(window.location.pathname) : "/");
 
 // -----------------------------------------------------------------------------
 // COMPUTED HELPERS
@@ -66,7 +73,7 @@ function patchHistory() {
 
 export function useRouteObserver() {
   const update = () => {
-    const newPath = window.location.pathname;
+    const newPath = stripBase(window.location.pathname);
     if (newPath !== path.value) {
       path.value = newPath;
     }
