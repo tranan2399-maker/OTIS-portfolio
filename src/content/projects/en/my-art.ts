@@ -13,7 +13,7 @@ import type { ProjectContent } from "../../types";
 export default {
   title: "B24 JSC",
   theme: "dark",
-  tags: ["ai", "art", "gallery"],
+  tags: ["design", "figma", "branding"],
   description:
     "A collection of images, solutions, and design reports for the B24 JSC system.<br/><br/>Images are organized in a smooth scrolling vertical layout.",
   components: [
