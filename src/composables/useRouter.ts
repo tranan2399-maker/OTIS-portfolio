@@ -1,15 +1,22 @@
+const BASE = import.meta.env.BASE_URL ?? "/";
+
+// Ensure path always starts with the base URL prefix
+const withBase = (path: string): string => {
+  const base = BASE.endsWith("/") ? BASE.slice(0, -1) : BASE;
+  if (path.startsWith(base)) return path;
+  return base + path;
+};
+
 export const useRouter = () => {
   const push = (path: string) => {
     if (typeof window !== "undefined") {
-      // The intercepted pushState in useRoute.ts will automatically trigger path updates
-      window.history.pushState(null, "", path);
+      window.history.pushState(null, "", withBase(path));
     }
   };
 
   const replace = (path: string) => {
     if (typeof window !== "undefined") {
-      // The intercepted replaceState in useRoute.ts will automatically trigger path updates
-      window.history.replaceState(null, "", path);
+      window.history.replaceState(null, "", withBase(path));
     }
   };
 
