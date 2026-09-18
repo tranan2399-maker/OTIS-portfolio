@@ -61,8 +61,8 @@ onMounted(async () => {
         v-if="props.type === 'image'"
         :src="props.src"
         :alt="props.alt"
-        loading="lazy"
-        fetchpriority="high"
+        :loading="props.index === 0 ? 'eager' : 'lazy'"
+        :fetchpriority="props.index === 0 ? 'high' : 'auto'"
         class="project-media-image"
         ref="mediaRef"
       />
