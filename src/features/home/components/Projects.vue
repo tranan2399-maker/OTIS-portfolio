@@ -43,7 +43,6 @@ onMounted(loadPreviews);
     <div class="grid">
       <div class="projects-cards">
         <PreviewCard v-for="preview in loadedPreviews" :key="preview.title" :preview="preview" />
-        <PreviewCard v-if="isFeatureEnabled('startProject')" />
       </div>
     </div>
   </div>
