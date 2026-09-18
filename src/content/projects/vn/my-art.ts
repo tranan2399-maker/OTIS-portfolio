@@ -13,8 +13,7 @@ export default {
   title: "B24 JSC",
   theme: "dark",
   tags: ["design", "figma", "branding"],
-  description:
-    "Bộ sưu tập các hình ảnh, giải pháp và báo cáo thiết kế cho hệ thống B24 JSC.<br/><br/>Các hình ảnh được tổ chức theo bố cục cuộn mượt mà từ trên xuống.",
+  description: "",
   components: [
     { type: "media", props: { type: "video", src: videoLogo, caption: "Logo B24 Động", originalRatio: true } },
     { type: "media", props: { type: "image", src: img1, alt: "B24 Image 1", caption: "Thiết kế 1", originalRatio: true } },

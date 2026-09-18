@@ -13,8 +13,7 @@ export default {
   title: "B24 JSC",
   theme: "dark",
   tags: ["design", "figma", "branding"],
-  description:
-    "Design collection, solutions and reports for the B24 JSC system.<br/><br/>The images are organized in a smooth scrolling vertical layout.",
+  description: "",
   components: [
     { type: "media", props: { type: "video", src: videoLogo, caption: "Animated B24 Logo", originalRatio: true } },
     { type: "media", props: { type: "image", src: img1, alt: "B24 Image 1", caption: "Design 1", originalRatio: true } },
