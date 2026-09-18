@@ -1,12 +1,12 @@
-import img1 from "../../../assets/images/projects/my-art/b24-1.jpg";
-import img2 from "../../../assets/images/projects/my-art/b24-2.svg";
-import img4 from "../../../assets/images/projects/my-art/b24-4.svg";
-import img5 from "../../../assets/images/projects/my-art/b24-5.png";
-import img6 from "../../../assets/images/projects/my-art/b24-6.png";
-import img7 from "../../../assets/images/projects/my-art/b24-7.svg";
-import img8 from "../../../assets/images/projects/my-art/b24-8.svg";
-import img9 from "../../../assets/images/projects/my-art/b24-9.svg";
-import videoLogo from "../../../assets/videos/b24-intro.mp4";
+import img1 from "../../../assets/images/projects/my-art/b24-1.min.webp";
+import img2 from "../../../assets/images/projects/my-art/b24-2.min.webp";
+import img4 from "../../../assets/images/projects/my-art/b24-4.min.webp";
+import img5 from "../../../assets/images/projects/my-art/b24-5.min.webp";
+import img6 from "../../../assets/images/projects/my-art/b24-6.min.webp";
+import img7 from "../../../assets/images/projects/my-art/b24-7.min.webp";
+import img8 from "../../../assets/images/projects/my-art/b24-8.min.webp";
+import img9 from "../../../assets/images/projects/my-art/b24-9.min.webp";
+import videoLogo from "../../../assets/videos/b24-intro.min.mp4";
 
 import type { ProjectContent } from "../../types";
 

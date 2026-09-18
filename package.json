@@ -19,6 +19,7 @@
     "vue": "^3.5.22"
   },
   "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@types/howler": "^2.2.12",
     "@types/node": "^24.6.0",
     "@types/three": "^0.181.0",
@@ -26,6 +27,7 @@
     "@vue/tsconfig": "^0.8.1",
     "prettier": "^3.6.2",
     "sass": "^1.93.2",
+    "sharp": "^0.35.4",
     "shx": "^0.4.0",
     "typescript": "~5.9.3",
     "vite": "^7.1.7",
