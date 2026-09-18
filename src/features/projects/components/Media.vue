@@ -26,7 +26,7 @@ const wrapperClasses = computed(() => {
   };
 });
 
-watchEffect(async (onInvalidate) => {
+onMounted(() => {
   if (!wrapperRef.value) {
     return;
   }
@@ -39,14 +39,14 @@ watchEffect(async (onInvalidate) => {
       toggleActions: "play none none reset",
     },
   });
+  
+  // Animate the container (works well for both image and video)
   tl.fromTo(mediaContentRef.value, { scale: 0.8 }, { scale: 1, duration: 0.4, ease: "power1.out" }, 0);
-  tl.fromTo(mediaRef.value, { scale: 1.2 }, { scale: 1, duration: 0.4, ease: "power1.out" }, 0);
-
-  onInvalidate(() => {
-    tl.kill();
-    gsap.set(mediaContentRef.value, { scale: 1 });
-    gsap.set(mediaRef.value, { scale: 1 });
-  });
+  
+  // Only apply the inner parallax scale effect to images to prevent video stuttering
+  if (props.type === "image") {
+    tl.fromTo(mediaRef.value, { scale: 1.2 }, { scale: 1, duration: 0.4, ease: "power1.out" }, 0);
+  }
 });
 
 onMounted(async () => {
@@ -162,10 +162,13 @@ onMounted(async () => {
     object-fit: cover;
   }
 
-  &-video {
+    &-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
 
   &-content {
@@ -174,6 +177,9 @@ onMounted(async () => {
     background-color: var(--color-background-300);
     width: 100%;
     height: 100%;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
 
   &.project-media-original-ratio {
