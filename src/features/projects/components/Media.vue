@@ -31,19 +31,25 @@ onMounted(() => {
     return;
   }
 
+  const el = mediaContentRef.value;
+
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: wrapperRef.value,
       start: "top bottom",
-      end: "bottom bottom",
-      toggleActions: "play none none reset",
+      // "play none none none" = play once, never reset → no flicker on scroll
+      toggleActions: "play none none none",
+    },
+    onComplete: () => {
+      // Clean up will-change after animation ends to free GPU resources
+      if (el) el.style.willChange = "auto";
     },
   });
-  
-  // Animate the container (works well for both image and video)
-  tl.fromTo(mediaContentRef.value, { scale: 0.8 }, { scale: 1, duration: 0.4, ease: "power1.out" }, 0);
-  
-  // Only apply the inner parallax scale effect to images to prevent video stuttering
+
+  // Animate the container
+  tl.fromTo(el, { scale: 0.8 }, { scale: 1, duration: 0.4, ease: "power1.out" }, 0);
+
+  // Only scale the inner element for images (not video, to avoid stutter)
   if (props.type === "image") {
     tl.fromTo(mediaRef.value, { scale: 1.2 }, { scale: 1, duration: 0.4, ease: "power1.out" }, 0);
   }
@@ -166,9 +172,7 @@ onMounted(async () => {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    will-change: transform;
     transform: translateZ(0);
-    backface-visibility: hidden;
   }
 
   &-content {
@@ -179,7 +183,6 @@ onMounted(async () => {
     height: 100%;
     will-change: transform;
     transform: translateZ(0);
-    backface-visibility: hidden;
   }
 
   &.project-media-original-ratio {
