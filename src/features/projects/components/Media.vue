@@ -37,13 +37,16 @@ onMounted(() => {
     scrollTrigger: {
       trigger: wrapperRef.value,
       start: "top bottom",
-      // "play none none none" = play once, never reset → no flicker on scroll
-      toggleActions: "play none none none",
+      // Play on enter, reverse on leave back up
+      toggleActions: "play none none reverse",
     },
     onComplete: () => {
       // Clean up will-change after animation ends to free GPU resources
       if (el) el.style.willChange = "auto";
     },
+    onReverseComplete: () => {
+      if (el) el.style.willChange = "auto";
+    }
   });
 
   // Animate the container
