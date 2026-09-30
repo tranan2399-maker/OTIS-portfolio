@@ -15,7 +15,10 @@ export type TagVariant =
   | "glsl"
   | "design"
   | "figma"
-  | "branding";
+  | "branding"
+  | "mongodb"
+  | "nodejs";
+
 
 export const tagLabels = {
   three: "Three.js",
@@ -35,4 +38,7 @@ export const tagLabels = {
   design: "Design",
   figma: "Figma",
   branding: "Branding",
+  mongodb: "MongoDB",
+  nodejs: "Node.js",
 } as const satisfies Record<TagVariant, string>;
+

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, ref, onMounted, watchEffect } from "vue";
+import { computed, ref, onMounted } from "vue";
+
 import gsap from "gsap";
 import Notch from "../../../components/Notch.vue";
 

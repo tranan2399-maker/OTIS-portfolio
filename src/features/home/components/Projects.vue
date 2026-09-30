@@ -6,7 +6,6 @@ import PreviewCard from "../../projects/components/PreviewCard.vue";
 import NotchSection from "../../../components/NotchSection.vue";
 import Banner from "../../../components/Banner.vue";
 import { t } from "../../../i18n/utils/translate";
-import { isFeatureEnabled } from "../../../utils/features";
 
 import type { ProjectPreview } from "../../../content/types";
 
