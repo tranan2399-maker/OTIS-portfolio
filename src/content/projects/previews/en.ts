@@ -5,10 +5,17 @@ import thumbnailQuibbo from "../../../assets/thumbnails/quibbo.webp";
 import thumbnailPokedex from "../../../assets/thumbnails/pokedex.webp";
 import thumbnailSharkie from "../../../assets/thumbnails/sharkie.webp";
 import thumbnailStreakon from "../../../assets/thumbnails/streakon.webp";
+import thumbnailDreamCinema from "../../../assets/thumbnails/dream-cinema.jpg";
 
 import type { ProjectPreview } from "../../types";
 
 export default [
+  {
+    title: "Dream Cinema",
+    slug: "dream-cinema",
+    thumbnail: thumbnailDreamCinema,
+    description: "Full-stack cinema booking app",
+  },
   {
     title: "B24 JSC",
     slug: "my-art",
