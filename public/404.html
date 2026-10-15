@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>OTIS Portfolio</title>
+    <script>
+      // GitHub Pages SPA fix: save the current path then redirect to index.html
+      sessionStorage.redirect = location.href;
+      window.location.replace(
+        "/" + location.pathname.split("/")[1] + "/"
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
