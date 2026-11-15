@@ -1,3 +1,5 @@
+import thumbnailVinFast from "../../../assets/thumbnails/vinfast-tay-saigon.webp";
+import thumbnailViewdecor from "../../../assets/thumbnails/viewdecor-interior.webp";
 import thumbnailMyArt from "../../../assets/thumbnails/my-art.png";
 import thumbnailCubeWar from "../../../assets/thumbnails/cubewar.webp";
 import thumbnailQuibbo from "../../../assets/thumbnails/quibbo.webp";
@@ -11,6 +13,18 @@ import thumbnailOtisAuto from "../../../assets/thumbnails/otis-auto.webp";
 import type { ProjectPreview } from "../../types";
 
 export default [
+  {
+    title: "VinFast Tay Saigon",
+    slug: "vinfast-tay-saigon",
+    thumbnail: thumbnailVinFast,
+    description: "Official VinFast dealership digital showroom & after-sales service platform",
+  },
+  {
+    title: "Viewdecor Interior",
+    slug: "viewdecor-interior",
+    thumbnail: thumbnailViewdecor,
+    description: "High-end corporate interior architecture & design platform",
+  },
   {
     title: "Dream Cinema",
     slug: "dream-cinema",
